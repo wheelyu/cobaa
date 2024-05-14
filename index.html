@@ -39,7 +39,9 @@
         .light-mode h3, .dark-mode h3, i{
             color: rgb(255, 255, 255);
             font-size: 40px;
+
         }
+
         .container{
             margin-top: 50%;
             margin-bottom: 50%;
@@ -55,7 +57,6 @@
             animation-timing-function: ease-in-out;
             animation-direction: alternate;
 
-            
         }
         @keyframes slideIn {
             from {
@@ -68,17 +69,62 @@
             }
             
         }
+        .light-mode h5{
+            color: white;
+        }
+        .dark-mode h5{
+            font-size: 10px;
+            color: white;
+            animation: slideSin;
+            animation-duration: 6s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+
+        }
+        @keyframes slideSin {
+            from {
+                transform: translateY(300px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            
+        }
         .light-mode h4{
             color: white;
-            
+        }
+        .light-mode img{
+            opacity: 0;
+        }
+        .dark-mode img{
+            margin-top: 40px;
+            animation: swipeUp;
+            animation-duration: 6s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+
+        }
+        @keyframes swipeUp {
+            from {
+                transform: translateX(-900px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0px);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
 <body class="light-mode">
+
     <div class="container">
+        <i class="fas fa-heart"></i>
         <center><p>
-            Coba pencet tombol dibawah ini
+            Coba pencet tombol ini
         </p>
         
         <h3 id="DarkModetext">Dark Mode is OFF</h3>
@@ -106,10 +152,15 @@
                     </div>
                 </div>
             </div>
-            </label></center>
-
+            </label>
+            <img src="index.jpg" alt="index" width="70%">
+            <h5>Kita Bikin Romantis</h5></center>
+        
+            
     </div>
-    <center><footer>credit: mutiara gak pernah mandi</footer></center>
+    <center>
+        <i class="fas fa-heart"></i>
+    <footer>credit: mutiara gak pernah mandi</footer></center>
     <script>
         function darkMode() {
             let element = document.body;
